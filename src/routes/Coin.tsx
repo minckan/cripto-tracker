@@ -140,6 +140,7 @@ interface PriceData {
   };
 }
 
+
 function Coin() {
   const {coinId} = useParams<Params>()
   const {state} = useLocation<RouteState>()
@@ -197,7 +198,7 @@ function Coin() {
             </OverviewItem>
             <OverviewItem>
               <span>Price:</span>
-              <span>{tickersData?.quotes.USD.price.toFixed(3)}</span>
+              <span>{tickersData?.quotes?.USD?.price?.toFixed(3)}</span>
             </OverviewItem>
           </Overview>
           <Description>{infoData?.description}</Description>
